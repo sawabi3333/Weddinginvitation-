@@ -1,0 +1,803 @@
+
+
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="theme-color" content="#241735">
+
+<title>Ahmed & Walaa Wedding</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+
+  --purple:#241735;
+
+  --purple2:#49305d;
+
+  --gold:#d7b66b;
+
+  --lightgold:#f7e8bb;
+
+  --cream:#faf6ef;
+
+}
+
+* { box-sizing:border-box; }
+
+body {
+
+  margin:0;
+
+  font-family:'Cairo',sans-serif;
+
+  background:var(--cream);
+
+  color:#352a3d;
+
+}
+
+#open-toggle {
+
+  position:absolute;
+
+  opacity:0;
+
+  pointer-events:none;
+
+}
+
+#open-toggle:checked ~ .intro { display:none; }
+
+#open-toggle:checked ~ #invitation { display:block; }
+
+.intro {
+
+  min-height:100vh;
+
+  min-height:100svh;
+
+  display:grid;
+
+  place-items:center;
+
+  padding:25px;
+
+  color:var(--lightgold);
+
+  background:radial-gradient(circle,var(--purple2),var(--purple) 70%);
+
+}
+
+.envelope {
+
+  width:min(100%,440px);
+
+  min-height:570px;
+
+  border:1px solid var(--gold);
+
+  outline:1px solid #b99a55;
+
+  outline-offset:7px;
+
+  padding:35px 20px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+}
+
+.ornament,.flourish {
+
+  color:var(--gold);
+
+  font-size:36px;
+
+  margin:15px;
+
+}
+
+.small {
+
+  font-size:11px;
+
+  letter-spacing:3px;
+
+}
+
+.couple {
+
+  direction:ltr;
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:10px;
+
+  color:var(--lightgold);
+
+  font-family:'Bodoni Moda',serif;
+
+  font-weight:400;
+
+  letter-spacing:1px;
+
+  line-height:1.4;
+
+}
+
+.couple .amp {
+
+  color:var(--gold);
+
+  font-family:'Great Vibes',cursive;
+
+  font-size:1.1em;
+
+}
+
+.envelope .couple { font-size:clamp(38px,9vw,54px); }
+
+.hero .couple { font-size:clamp(45px,10vw,76px); }
+
+footer .couple { font-size:clamp(38px,9vw,55px); }
+
+.gold-line {
+
+  width:85px;
+
+  height:1px;
+
+  background:var(--gold);
+
+  margin:15px auto;
+
+}
+
+.gold-button {
+
+  display:inline-block;
+
+  border:0;
+
+  border-radius:3px;
+
+  padding:13px 28px;
+
+  background:linear-gradient(135deg,#f3dfa0,#bd9747);
+
+  color:#281b34;
+
+  font:700 15px 'Cairo',sans-serif;
+
+  cursor:pointer;
+
+  text-decoration:none;
+
+}
+
+.open-label { margin-top:15px; }
+
+#invitation { display:none; }
+
+.hero {
+
+  min-height:100vh;
+
+  min-height:100svh;
+
+  display:grid;
+
+  place-items:center;
+
+  text-align:center;
+
+  padding:30px 20px;
+
+  color:var(--lightgold);
+
+  background:linear-gradient(140deg,#21142e,#49305d,#21142e);
+
+}
+
+.frame {
+
+  width:min(100%,600px);
+
+  padding:50px 18px;
+
+  border:1px solid var(--gold);
+
+  outline:1px solid #b99a55;
+
+  outline-offset:7px;
+
+}
+
+.hero .couple { margin:25px 0; }
+
+.arabic-lead { line-height:2.2; }
+
+.date {
+
+  color:white;
+
+  font-size:25px;
+
+  letter-spacing:3px;
+
+  margin-top:25px;
+
+}
+
+.date span { color:var(--gold); }
+
+.day { font-size:14px; }
+
+.section {
+
+  padding:65px 20px;
+
+  text-align:center;
+
+}
+
+.section h2 {
+
+  color:var(--purple);
+
+  font-size:26px;
+
+}
+
+.eyebrow {
+
+  color:#a17b35;
+
+  font-size:11px;
+
+  letter-spacing:3px;
+
+}
+
+.countdown-section { background:#f1eaf3; }
+
+.countdown {
+
+  direction:rtl;
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:9px;
+
+  max-width:450px;
+
+  margin:25px auto 0;
+
+}
+
+.countdown div {
+
+  flex:1;
+
+  min-width:0;
+
+  padding:15px 5px;
+
+  background:var(--purple);
+
+  color:var(--lightgold);
+
+  border:1px solid var(--gold);
+
+}
+
+.countdown b {
+
+  display:block;
+
+  font-size:25px;
+
+}
+
+.countdown span { font-size:12px; }
+
+.details { background:var(--cream); }
+
+.detail-card {
+
+  max-width:430px;
+
+  margin:18px auto;
+
+  padding:25px 15px;
+
+  border:1px solid #d9c79a;
+
+  background:#fffdf8;
+
+}
+
+.detail-icon { color:#b08c43; font-size:30px; }
+
+.detail-card h3 { color:var(--purple); }
+
+.muted { color:#817789; font-size:13px; }
+
+.map-link {
+
+  display:inline-block;
+
+  margin-top:12px;
+
+  padding:9px 15px;
+
+  border:1px solid var(--gold);
+
+  color:var(--purple);
+
+  text-decoration:none;
+
+}
+
+.rsvp { background:#f0e8f1; }
+
+.rsvp-intro { line-height:2; }
+
+form {
+
+  max-width:460px;
+
+  margin:25px auto 0;
+
+  text-align:right;
+
+}
+
+label {
+
+  display:block;
+
+  margin:15px 0;
+
+  color:var(--purple);
+
+  font-size:14px;
+
+}
+
+input,select,textarea {
+
+  display:block;
+
+  width:100%;
+
+  margin-top:7px;
+
+  padding:12px;
+
+  border:1px solid #d4c4d9;
+
+  border-radius:3px;
+
+  background:white;
+
+  font:inherit;
+
+}
+
+.submit { width:100%; margin-top:10px; }
+
+#formStatus { text-align:center; font-size:14px; }
+
+.note {
+
+  font-size:11px;
+
+  color:#82748a;
+
+}
+
+footer {
+
+  padding:45px 15px;
+
+  text-align:center;
+
+  color:var(--lightgold);
+
+  background:var(--purple);
+
+}
+
+footer small { letter-spacing:3px; }
+
+@media(min-width:700px) {
+
+  .details {
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+  }
+
+  .details .eyebrow,
+
+  .details h2,
+
+  .details .gold-line { grid-column:1/-1; }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<input type="checkbox" id="open-toggle">
+
+<!-- غلاف الدعوة -->
+
+<div class="intro">
+
+  <div class="envelope">
+
+    <div class="ornament">✦</div>
+
+    <p class="small">TOGETHER WITH THEIR FAMILIES</p>
+
+    <h1 class="couple">
+
+      <span>Ahmed</span>
+
+      <span class="amp">&</span>
+
+      <span>Walaa</span>
+
+    </h1>
+
+    <div class="gold-line"></div>
+
+    <p>يتشرفان بدعوتكم لحضور حفل زفافهما</p>
+
+    <label for="open-toggle" class="gold-button open-label">
+
+      افتح الدعوة ✧
+
+    </label>
+
+    <div class="ornament">❦</div>
+
+  </div>
+
+</div>
+
+<!-- محتوى الدعوة -->
+
+<main id="invitation">
+
+  <section class="hero">
+
+    <div class="frame">
+
+      <p>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</p>
+
+      <p class="small">THE WEDDING INVITATION</p>
+
+      <h1 class="couple">
+
+        <span>Ahmed</span>
+
+        <span class="amp">&</span>
+
+        <span>Walaa</span>
+
+      </h1>
+
+      <div class="gold-line"></div>
+
+      <p class="arabic-lead">
+
+        بكل الحب والفرح، يسعدنا دعوتكم لمشاركتنا أجمل أيام العمر
+
+      </p>
+
+      <div class="flourish">❦</div>
+
+      <div class="date">02 <span>•</span> 01 <span>•</span> 2027</div>
+
+      <p class="day">السبت — الثاني من يناير ٢٠٢٧</p>
+
+    </div>
+
+  </section>
+
+  <!-- العداد -->
+
+  <section class="section countdown-section">
+
+    <p class="eyebrow">THE COUNTDOWN</p>
+
+    <h2>باقي على فرحتنا</h2>
+
+    <div class="countdown" id="countdown">
+
+      <div><b id="days">00</b><span>يوم</span></div>
+
+      <div><b id="hours">00</b><span>ساعة</span></div>
+
+      <div><b id="minutes">00</b><span>دقيقة</span></div>
+
+      <div><b id="seconds">00</b><span>ثانية</span></div>
+
+    </div>
+
+  </section>
+
+  <!-- تفاصيل الفرح -->
+
+  <section class="section details">
+
+    <p class="eyebrow">SAVE THE DATE</p>
+
+    <h2>يسعدنا وجودكم معنا</h2>
+
+    <div class="gold-line"></div>
+
+    <div class="detail-card">
+
+      <div class="detail-icon">✧</div>
+
+      <h3>موعدنا</h3>
+
+      <p>السبت، ٢ يناير ٢٠٢٧</p>
+
+      <p class="muted">من الساعة ٧ مساءً حتى ١١ مساءً</p>
+
+    </div>
+
+    <div class="detail-card">
+
+      <div class="detail-icon">⌖</div>
+
+      <h3>مكان الفرح</h3>
+
+      <p>قاعة الأوبرا — نادي إيرو سبورت</p>
+
+      <a class="map-link"
+
+         target="_blank"
+
+         rel="noopener"
+
+         href="https://www.google.com/maps/search/?api=1&query=قاعة+الأوبرا+نادي+إيرو+سبورت">
+
+        افتح الموقع على الخريطة ↗
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- تأكيد الحضور -->
+
+  <section class="section rsvp">
+
+    <p class="eyebrow">KINDLY RESPOND</p>
+
+    <h2>تأكيد الحضور</h2>
+
+    <p class="rsvp-intro">
+
+      وجودكم هيكمّل فرحتنا 💜
+
+      من فضلك أكد حضورك من خلال النموذج التالي.
+
+    </p>
+
+    <form id="rsvpForm">
+
+      <label>
+
+        الاسم بالكامل
+
+        <input name="name" required maxlength="100"
+
+               placeholder="اكتب اسمك">
+
+      </label>
+
+      <label>
+
+        هل ستتمكن من الحضور؟
+
+        <select name="attendance" required>
+
+          <option value="">اختر إجابة</option>
+
+          <option value="سأحضر">بإذن الله، سأحضر</option>
+
+          <option value="لن أتمكن من الحضور">أعتذر، لن أتمكن من الحضور</option>
+
+        </select>
+
+      </label>
+
+      <label>
+
+        عدد الحضور (بما فيهم أنت)
+
+        <select name="guests">
+
+          <option value="1">1</option>
+
+          <option value="2">2</option>
+
+          <option value="3">3</option>
+
+          <option value="4">4</option>
+
+          <option value="5">5</option>
+
+        </select>
+
+      </label>
+
+      <label>
+
+        رسالة تهنئة (اختياري)
+
+        <textarea name="message" rows="3" maxlength="500"
+
+                  placeholder="اكتب كلمة جميلة للعروسين"></textarea>
+
+      </label>
+
+      <button class="gold-button submit" type="submit">
+
+        إرسال التأكيد ✦
+
+      </button>
+
+      <p id="formStatus" aria-live="polite"></p>
+
+    </form>
+
+    <p class="note">
+
+      نموذج تأكيد الحضور يحتاج ربطه بجدول Google Sheets لتخزين الردود.
+
+    </p>
+
+  </section>
+
+  <footer>
+
+    <div class="flourish">❦</div>
+
+    <p>فرحتنا تكمل بوجودكم</p>
+
+    <h2 class="couple">
+
+      <span>Ahmed</span>
+
+      <span class="amp">&</span>
+
+      <span>Walaa</span>
+
+    </h2>
+
+    <small>02 · 01 · 2027</small>
+
+  </footer>
+
+</main>
+
+<script>
+
+/* موعد الفرح بتوقيت القاهرة */
+
+const weddingDate = new Date(
+
+  '2027-01-02T19:00:00+02:00'
+
+).getTime();
+
+function updateCountdown() {
+
+  const now = Date.now();
+
+  const difference = weddingDate - now;
+
+  if (difference <= 0) {
+
+    document.getElementById('countdown').innerHTML =
+
+      '<h2>فرحتنا بدأت! 💜</h2>';
+
+    return;
+
+  }
+
+  const days = Math.floor(difference / 86400000);
+
+  const hours = Math.floor((difference % 86400000) / 3600000);
+
+  const minutes = Math.floor((difference % 3600000) / 60000);
+
+  const seconds = Math.floor((difference % 60000) / 1000);
+
+  document.getElementById('days').textContent = days;
+
+  document.getElementById('hours').textContent =
+
+    String(hours).padStart(2, '0');
+
+  document.getElementById('minutes').textContent =
+
+    String(minutes).padStart(2, '0');
+
+  document.getElementById('seconds').textContent =
+
+    String(seconds).padStart(2, '0');
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown, 1000);
+
+/* نموذج الحضور - لم يتم ربط Google Sheets بعد */
+
+document.getElementById('rsvpForm').addEventListener(
+
+  'submit',
+
+  function(event) {
+
+    event.preventDefault();
+
+    document.getElementById('formStatus').textContent =
+
+      'النموذج لم يتم ربطه بجدول Google Sheets بعد.';
+
+  }
+
+);
+
+</script>
+
+</body>
+
+</html>
